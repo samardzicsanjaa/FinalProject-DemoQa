@@ -1,6 +1,8 @@
 package demoQa_POM.basePage;
 
 import demoQa_POM.demoQAHomePage.DemoQaHomePage;
+import demoQa_POM.pages.AlertFrameWindows.AlertFrameWindows;
+import demoQa_POM.pages.AlertFrameWindows.BrowserWindows;
 import demoQa_POM.pages.BookStoreApplication.BookStore;
 import demoQa_POM.pages.BookStoreApplication.BookStoreApplication;
 import demoQa_POM.pages.BookStoreApplication.Login;
@@ -41,6 +43,8 @@ public class BasePage {
     public Login login;
     public BookStore bookStore;
     public Profile profile;
+    public AlertFrameWindows alertFrameWindows;
+    public BrowserWindows browserWindows;
 
     @BeforeClass
     public void beforeClass() {
@@ -67,6 +71,8 @@ public class BasePage {
         login = new Login(driver);
         bookStore = new BookStore(driver);
         profile = new Profile(driver);
+        alertFrameWindows = new AlertFrameWindows(driver);
+        browserWindows = new BrowserWindows(driver);
     }
 
 
